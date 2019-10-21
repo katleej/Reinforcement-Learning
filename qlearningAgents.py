@@ -4,7 +4,6 @@
 # educational purposes provided that (1) you do not distribute or publish
 # solutions, (2) you retain this notice, and (3) you provide clear
 # attribution to UC Berkeley, including a link to http://ai.berkeley.edu.
-#
 # Attribution Information: The Pacman AI projects were developed at UC Berkeley.
 # The core projects and autograders were primarily created by John DeNero
 # (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
@@ -55,8 +54,6 @@ class QLearningAgent(ReinforcementAgent):
         key = (state, action)
         return self.values[key]
 
-
-
     def computeValueFromQValues(self, state):
         """
           Returns max_action Q(state,action)
@@ -75,7 +72,6 @@ class QLearningAgent(ReinforcementAgent):
                 qActions.append(self.getQValue(state, action))
             maxvalue = max(qActions)
             return maxvalue
-
 
     def computeActionFromQValues(self, state):
         """
@@ -122,7 +118,6 @@ class QLearningAgent(ReinforcementAgent):
             return random.choice(legalActions)
 
 
-        return action
 
     def update(self, state, action, nextState, reward):
         """
